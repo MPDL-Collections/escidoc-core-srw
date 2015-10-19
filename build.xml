@@ -43,7 +43,7 @@
 		<!--javac srcdir="src" destdir="build" deprecation="true" debug="on"
            includes="gov/**/*.java ORG/oclc/os/SRW/*.java"-->
 		<javac srcdir="${src.dir}" destdir="${build.dir}" deprecation="true" debug="on"
-           includes="org/osuosl/**/*.java de/escidoc/**/*.java org/apache/lucene/search/*.java">
+           includes="org/osuosl/**/*.java de/escidoc/**/*.java org/apache/lucene/search/*.java sun/io/*.java">
 			<classpath>
 				<fileset dir="${lib.dir}">
 					<include name="**/*.jar"/>
@@ -57,7 +57,7 @@
 			<fileset dir="${conf.dir}" includes="*.wsdd.Provider"/>
 		</copy>
 		<!--MIH: also include packages de.escidoc.* in compilation -->
-		<jar jarfile="${dist.dir}/${escidoc.srw.jarfile.name}" basedir="${build.dir}" includes="org/osuosl/**/*.class de/escidoc/**/*.class META-INF/services/*"/>
+		<jar jarfile="${dist.dir}/${escidoc.srw.jarfile.name}" basedir="${build.dir}" includes="org/osuosl/**/*.class de/escidoc/**/*.class sun/io/*.class META-INF/services/*"/>
 
 	</target>
 
