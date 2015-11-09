@@ -65,6 +65,7 @@ import org.xml.sax.InputSource;
 import org.z3950.zing.cql.CQLNode;
 import org.z3950.zing.cql.CQLParseException;
 
+import de.escidoc.sb.srw.util.Util;
 import ORG.oclc.os.SRW.Record;
 import ORG.oclc.os.SRW.RecordIterator;
 import ORG.oclc.os.SRW.SRWDiagnostic;
@@ -189,7 +190,7 @@ public class EscidocSRWDatabaseImpl extends org.osuosl.srw.SRWDatabaseImpl {
             query = request.getQuery();
             try {
                 log.info("search:\n"
-                    + ORG.oclc.util.Util.byteArrayToString(query
+                    + Util.byteArrayToString(query
                         .getBytes("UTF-8")));
             }
             catch (Exception e) {
@@ -498,7 +499,7 @@ public class EscidocSRWDatabaseImpl extends org.osuosl.srw.SRWDatabaseImpl {
             query = request.getQuery();
             try {
                 log.info("search:\n"
-                    + ORG.oclc.util.Util.byteArrayToString(query
+                    + Util.byteArrayToString(query
                         .getBytes("UTF-8")));
             }
             catch (Exception e) {

@@ -38,6 +38,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.z3950.zing.cql.CQLTermNode;
 
+import de.escidoc.sb.srw.util.Util;
 import ORG.oclc.os.SRW.QueryResult;
 import ORG.oclc.os.SRW.TermList;
 
@@ -138,7 +139,7 @@ public class SRWDatabaseImpl extends ORG.oclc.os.SRW.SRWDatabase{
             String scanTerm=request.getScanClause();
             try{
                 if(scanTerm!=null)
-                    log.info("scanTerm:\n"+ORG.oclc.util.Util.byteArrayToString(scanTerm.getBytes("UTF-8")));
+                    log.info("scanTerm:\n"+Util.byteArrayToString(scanTerm.getBytes("UTF-8")));
             }catch(Exception e){}
             root = (CQLTermNode)parser.parse(scanTerm);
 
